@@ -1,0 +1,63 @@
+/**
+ * 
+ */
+package com.MyPages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+/**
+ * @author adnan
+ *
+ */
+public class LoginPage extends BasePage{
+	
+	//Page locators:
+	
+	private By emailId = By.id("username");
+	private By password = By.id("password");
+	private By loginButton = By.id("loginBtn");
+	private By header = By.xpath("//i18n-string[@data-key='login.signupLink.text']");
+
+	public LoginPage(WebDriver driver) {
+		super(driver);
+		
+	}
+
+	// getters:
+	/**
+	 * @return the emailId
+	 */
+	public WebElement getEmailId() {
+		return getElement(emailId);
+	}
+
+	/**
+	 * @return the password
+	 */
+	public WebElement getPassword() {
+		return getElement(password);
+	}
+
+	/**
+	 * @return the loginButton
+	 */
+	public WebElement getLoginButton() {
+		return getElement(loginButton);
+	}
+
+	/**
+	 * @return the header
+	 */
+	public WebElement getHeader() {
+		return getElement(header);
+	}
+
+
+	
+	
+	
+	
+
+}

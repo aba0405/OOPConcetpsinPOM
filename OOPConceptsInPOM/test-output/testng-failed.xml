@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="3">
+  <test thread-count="2" parallel="methods" name="my hub spot test chrome(failed)" verbose="3">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.MyTests.LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="doLoginTest"/>
+          <include name="setUpTest"/>
+        </methods>
+      </class> <!-- com.MyTests.LoginTest -->
+    </classes>
+  </test> <!-- my hub spot test chrome(failed) -->
+  <test thread-count="2" parallel="methods" name="my hub spot test firefox(failed)" verbose="3">
+    <parameter name="browser" value="ff"/>
+    <classes>
+      <class name="com.MyTests.LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="doLoginTest"/>
+          <include name="setUpTest"/>
+        </methods>
+      </class> <!-- com.MyTests.LoginTest -->
+    </classes>
+  </test> <!-- my hub spot test firefox(failed) -->
+</suite> <!-- Failed suite [Suite] -->

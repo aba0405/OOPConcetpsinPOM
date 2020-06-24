@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" verbose="3" thread-count="2" parallel="tests">
+
+	<!--Start First Test-->
+	<test name="my hub spot test chrome" parallel="methods" thread-count="5">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.MyTests.LoginTest"/>
+			
+			
+		</classes>
+	</test><!--End First Test-->
+
+	<test name="my hub spot test firefox" parallel="methods" thread-count="5">
+		<parameter name="browser" value="ff" />
+		<classes>
+			<class name="com.MyTests.LoginTest"/>
+			
+			
+		</classes>
+	</test>
+
+	<!-- <test name="contacts page test"> <classes> <class name="com.qa.hubspot.tests.ContactsPageTest" 
+		/> </classes> </test> -->
+
+
+</suite>
